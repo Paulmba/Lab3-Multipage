@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact - Lab3 Multipage</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -14,12 +15,13 @@
          <li><a href="index.html">Home</a></li>
          <li><a href="services.html">Services</a></li>
          <li><a href="contact.html">Contact</a></li>
+         <button id="themeToggle">Switch Theme</button>
       </ul>
     </nav>
   </header>
   <main class="contact-form-container">
     <h2>Contact Us</h2>
-    <form action="#" method="post" novalidate>
+    <form id="contactForm" action="#" method="post" novalidate>
       <div class="form-group">
          <label for="name">Name:</label>
          <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -38,6 +40,7 @@
       </div>
       <button type="submit" class="btn">Send Message</button>
     </form>
+    <p id="response" style="margin-top: 1rem; color: green;"></p>
   </main>
   <footer>
     <p>&copy; 2025 Lab3 Multipage</p>

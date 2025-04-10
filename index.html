@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Lab3 Multipage</title>
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <header>
     <!-- Shared Navigation -->
     <nav class="navbar">
+      <div class="navbar-inner">  
       <ul>
          <li><a href="index.html">Home</a></li>
          <li><a href="services.html">Services</a></li>
          <li><a href="contact.html">Contact</a></li>
+         <button id="themeToggle">🌙 Switch Theme</button>
       </ul>
+      
     </nav>
     <!-- Hero Banner -->
     <div class="hero">
@@ -30,12 +34,22 @@
     </section>
     <!-- Sidebar Section -->
     <aside class="sidebar">
-      <h2>Latest News</h2>
+      <h2>Latest promotions</h2>
       <p>Stay tuned for our upcoming events and announcements!</p>
     </aside>
   </main>
+  <h2 style="text-align: center;">Team Members</h2>
+<ul id="userList"></ul>
+<button id="loadUsersBtn">Load Users</button>
+<div class="faq-item">
+  <h3 class="question">What is this website about?</h3>
+  <p class="answer">This is a demo project for learning web
+  development.</p>
+  </div>
+  <button id="backToTopBtn" class="back-to-top-btn">↑ Back to Top</button>
   <footer>
     <p>&copy; 2025 Lab3 Multipage</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

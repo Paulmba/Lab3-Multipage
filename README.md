@@ -43,6 +43,26 @@
 ### ✅ Animations & Effects  
 - Used **@keyframes** to animate the **hero banner (fade-in effect)**.  
 - Added **hover effects** to buttons and service cards.  
-- Implemented **focus transitions** on form fields for a smoother UI.  
+- Implemented **focus transitions** on form fields for a smoother UI. 
+
+###    Updated Features
+
+1. **Back to Top Button**  
+   - A **Back to Top** button was added to allow users to easily scroll back to the top of the page.
+   - The button appears only after the user scrolls down the page by 100px.
+   - When clicked, the page smoothly scrolls back to the top.
+
+2. **Switch Theme Toggle**  
+   - A **theme toggle button** was added to switch between **light** and **dark** themes on the website.
+   - The button toggles the theme by changing the background and text colors across the site.
+   
+3. **Form Validation**  
+   - A **contact form** was added with validation.
+   - The form checks if the user has entered values in both the **name** and **message** fields before submission.
+   - If the fields are empty, an alert prompts the user to fill them out.
+
+4. **Frequently Asked Questions (FAQ) Interactivity**  
+   - The FAQ section allows users to click on a question to reveal or hide the corresponding answer.
+   - This adds a smooth interactive experience to the FAQ section.
   
 

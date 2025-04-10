@@ -1,176 +1,342 @@
 /* Global Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Container Wrapper */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography & General Spacing */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #364b7a;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+section, aside, footer {
+  margin-top: 20px;
+}
+
+/* Navigation Bar (Flexbox) */
+.navbar {
+  background: #364b7a;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #ff9900;
+}
+#themeToggle {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+/* Hero Banner */
+.hero {
+  background: url('images/Hero2.avif') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Flexbox Layout for Home Page */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.intro,
+.sidebar {
+  background: #fff;
+  padding: 20px;
+  flex: 1;
+  border: 1px solid #ddd;
+}
+
+/* Services Page Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  height: 50%;
+}
+
+/* Contact Form */
+.contact-form-container {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border: 1px solid #ddd;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #ff9900;
+}
+
+.btn {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff9900;
+}
+
+/* Load Users Button */
+#loadUsersBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #364b7a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#loadUsersBtn:hover {
+  background: #2c3e60;
+}
+
+/* User List Styling */
+#userList {
+  list-style: none;
+  padding: 20px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#userList li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+#userList li:last-child {
+  border-bottom: none;
+}
+
+#userList li:hover {
+  background: #f9f9f9;
+}
+.answer {
+  display: none;
   }
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
+  .answer.visible {
+  display: block;
   }
-  a {
-    text-decoration: none;
-    color: inherit;
+  /* Back to Top Button Styles */
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #364b7a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;  
+}
+
+/* Show the button when user scrolls down */
+#backToTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+#backToTopBtn:hover {
+  background-color: #ff9900;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #364b7a;
+  color: #fff;
+}
+
+/* Animation using @keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  html,body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  to {
+    opacity: 1;
   }
-  main{
-    flex: 1;
-  }
-  
-  /* Navigation Bar (Flexbox) */
-  .navbar {
-    background: #364b7a;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  .navbar a {
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-  .navbar a:hover,
-  .navbar a:focus {
-    color: #ff9900;
-  }
-  
-  /* Hero Banner */
-  .hero {
-    background: url('images/Hero2.avif') center/cover no-repeat;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  /* Flexbox Layout for Home Page */
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212;
+  color: burlywood;
+}
+
+.dark-theme .navbar,
+.dark-theme footer {
+  background-color: #222;
+}
+
+.dark-theme .card,
+.dark-theme .contact-form-container,
+.dark-theme .intro,
+.dark-theme .sidebar,
+.dark-theme #userList {
+  background-color: #1e1e1e;
+  color: burlywood;
+  border-color: #333;
+}
+
+.dark-theme #loadUsersBtn {
+  background: #555;
+}
+
+.dark-theme #loadUsersBtn:hover {
+  background: #777;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
   .flex-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
-  }
-  .intro, .sidebar {
-    background: #fff;
-    padding: 20px;
-    flex: 1;
-    border: 1px solid #ddd;
-  }
-  
-  /* Services Page Grid Layout */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color:#fff;
-  }
-  .card {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .card img {
-    max-width: 100%;
-    height: 50%;
-  }
-  
-  /* Contact Form */
-  .contact-form-container {
-    padding: 20px;
-    background: #fff;
-    margin: 20px;
-    border: 1px solid #ddd;
-  }
-  .contact-form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .form-group {
-    display: flex;
     flex-direction: column;
   }
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  textarea:focus {
-    border-color: #ff9900;
+
+  .hero {
+    padding: 80px 20px;
   }
-  .btn {
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
   }
-  .btn:hover {
-    background: #ff9900;
+
+  .hero p {
+    font-size: 1rem;
   }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px;
-    background: #364b7a;
-    color: #fff;
-  }
-  
-  /* Animation using @keyframes */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    .flex-container {
-      flex-direction: column;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .navbar ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    .hero {
-      padding: 80px 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 1.8rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-  }
-  
+}
